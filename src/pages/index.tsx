@@ -47,7 +47,7 @@ export default function Home() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // TODO: connect Supabase, EmailJS, or API
-    alert("🎉 You've joined the waitlist!");
+    alert("🎉 You&apos;ve joined the waitlist!");
   };
 
   return (
@@ -86,6 +86,10 @@ export default function Home() {
             0%, 100% { opacity: 0.3; transform: scale(1); }
             50% { opacity: 1; transform: scale(1.2); }
           }
+          @keyframes inputGlow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0); }
+            50% { box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1); }
+          }
           .animate-float {
             animation: float 6s ease-in-out infinite;
           }
@@ -101,6 +105,9 @@ export default function Home() {
           }
           .animate-star-pulse {
             animation: starPulse 3s ease-in-out infinite;
+          }
+          .animate-input-glow {
+            animation: inputGlow 2s ease-in-out infinite;
           }
           .parallax-bg {
             background-attachment: fixed;
@@ -179,39 +186,34 @@ export default function Home() {
             exclusive growth tools designed to scale your business.
           </p>
 
-          {/* Waitlist Form */}
+          {/* Waitlist Form - Simplified with only email */}
           <form
             onSubmit={handleSubmit}
-            className="glass-morphism-dark p-8 rounded-3xl shadow-2xl flex flex-col gap-6 w-full max-w-2xl transform hover:shadow-2xl transition-all duration-300 animate-on-scroll border border-white/10"
+            className="glass-morphism-dark p-8 rounded-3xl shadow-2xl flex flex-col gap-6 w-full max-w-md transform hover:shadow-2xl transition-all duration-300 animate-on-scroll border border-white/10"
           >
-            <div className="flex flex-col sm:flex-row gap-4">
-              <input
-                type="text"
-                placeholder="First Name"
-                className="flex-1 px-5 py-4 border border-gray-700 rounded-xl focus:ring-4 focus:ring-purple-500/30 focus:border-purple-500 focus:outline-none transition-all duration-300 bg-gray-800/50 backdrop-blur-sm text-white placeholder-gray-400"
-                required
-              />
-              <input
-                type="text"
-                placeholder="Last Name"
-                className="flex-1 px-5 py-4 border border-gray-700 rounded-xl focus:ring-4 focus:ring-purple-500/30 focus:border-purple-500 focus:outline-none transition-all duration-300 bg-gray-800/50 backdrop-blur-sm text-white placeholder-gray-400"
-                required
-              />
+            <div className="text-center mb-4">
+              <h3 className="text-2xl font-bold text-white mb-2">Join the Waitlist</h3>
+              <p className="text-gray-400 text-sm">Be the first to access BrandPawa</p>
             </div>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="w-full px-5 py-4 border border-gray-700 rounded-xl focus:ring-4 focus:ring-purple-500/30 focus:border-purple-500 focus:outline-none transition-all duration-300 bg-gray-800/50 backdrop-blur-sm text-white placeholder-gray-400"
-              required
-            />
+            
+            <div className="relative">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                className="w-full px-5 py-4 border border-gray-700 rounded-xl focus:ring-4 focus:ring-purple-500/30 focus:border-purple-500 focus:outline-none transition-all duration-300 bg-gray-800/50 backdrop-blur-sm text-white placeholder-gray-400 text-center animate-input-glow"
+                required
+              />
+              <div className="absolute inset-0 rounded-xl border-2 border-transparent animate-pulse pointer-events-none"></div>
+            </div>
+            
             <button
               type="submit"
               className="w-full py-4 px-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold rounded-xl hover:from-purple-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-3xl animate-pulse-glow border border-purple-500/30"
             >
-              🚀 Unlock My BrandPawa
+              🚀 Join Waitlist & Get Early Access
             </button>
-            <p className="text-sm text-gray-400 mt-2">
-              Join 1,000+ brands already waiting
+            <p className="text-sm text-gray-400 text-center mt-2">
+              Join 1,000+ brands already waiting • No spam, ever
             </p>
           </form>
         </section>
@@ -243,7 +245,7 @@ export default function Home() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive tools and insights to transform your brand's growth trajectory
+                Comprehensive tools and insights to transform your brand&apos;s growth trajectory
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
@@ -256,7 +258,7 @@ export default function Home() {
                 {
                   icon: "🚀",
                   title: "Grow",
-                  description: "Access tailored strategies and growth tools designed specifically for your brand's needs."
+                  description: "Access tailored strategies and growth tools designed specifically for your brand&apos;s needs."
                 },
                 {
                   icon: "👑",
@@ -304,7 +306,7 @@ export default function Home() {
                 How It Works
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Simple steps to unlock your brand's full potential
+                Simple steps to unlock your brand&apos;s full potential
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8 relative">
@@ -316,8 +318,8 @@ export default function Home() {
               {[
                 {
                   step: "1",
-                  title: "Sign Up",
-                  description: "Join the waitlist and be among the first to access BrandPawa's powerful platform."
+                  title: "Join Waitlist",
+                  description: "Secure your spot with just your email and be among the first to access BrandPawa&apos;s powerful platform."
                 },
                 {
                   step: "2",
@@ -371,25 +373,33 @@ export default function Home() {
           
           <div className="max-w-4xl mx-auto relative z-10">
             <h2 className="text-4xl md:text-5xl font-black mb-8 animate-on-scroll text-glow">
-              Ready to unlock your brand's true potential?
+              Ready to unlock your brand&apos;s true potential?
             </h2>
             <p className="text-xl mb-12 opacity-90 max-w-2xl mx-auto leading-relaxed animate-on-scroll">
               Join thousands of forward-thinking brands already on the waitlist for exclusive early access.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-on-scroll">
-              <a
-                href="#"
-                className="inline-block py-4 px-8 bg-white text-purple-900 font-bold rounded-xl hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-3xl backdrop-blur-sm border border-white/20"
-              >
-                Join the Waitlist Now
-              </a>
-              <a
-                href="#"
-                className="inline-block py-4 px-8 glass-morphism-dark text-white font-bold rounded-xl hover:bg-white/10 transform hover:scale-105 transition-all duration-300 border border-white/20"
-              >
-                Learn More
-              </a>
-            </div>
+            
+            {/* Simplified Email Form */}
+            <form
+              onSubmit={handleSubmit}
+              className="max-w-md mx-auto mb-8 animate-on-scroll"
+            >
+              <div className="flex flex-col sm:flex-row gap-4">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-5 py-4 border border-gray-700 rounded-xl focus:ring-4 focus:ring-purple-500/30 focus:border-purple-500 focus:outline-none transition-all duration-300 bg-gray-800/50 backdrop-blur-sm text-white placeholder-gray-400"
+                  required
+                />
+                <button
+                  type="submit"
+                  className="sm:w-auto w-full py-4 px-8 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold rounded-xl hover:from-purple-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-3xl animate-pulse-glow border border-purple-500/30"
+                >
+                  Join Now
+                </button>
+              </div>
+            </form>
+
             <div className="mt-8 flex items-center justify-center gap-4 text-sm opacity-80 animate-on-scroll">
               <div className="flex items-center gap-2">
                 <div className="flex -space-x-2">
