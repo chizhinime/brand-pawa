@@ -47,7 +47,7 @@ export default function Home() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // TODO: connect Supabase, EmailJS, or API
-    alert("🎉 You've joined the waitlist!");
+    alert("🎉 You&apos;ve joined the waitlist!");
   };
 
   return (
@@ -243,7 +243,7 @@ export default function Home() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive tools and insights to transform your brand's growth trajectory
+                Comprehensive tools and insights to transform your brand&apos;s growth trajectory
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
@@ -256,7 +256,7 @@ export default function Home() {
                 {
                   icon: "🚀",
                   title: "Grow",
-                  description: "Access tailored strategies and growth tools designed specifically for your brand's needs."
+                  description: "Access tailored strategies and growth tools designed specifically for your brand&apos;s needs."
                 },
                 {
                   icon: "👑",
@@ -304,7 +304,7 @@ export default function Home() {
                 How It Works
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Simple steps to unlock your brand's full potential
+                Simple steps to unlock your brand&apos;s full potential
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8 relative">
@@ -317,7 +317,7 @@ export default function Home() {
                 {
                   step: "1",
                   title: "Sign Up",
-                  description: "Join the waitlist and be among the first to access BrandPawa's powerful platform."
+                  description: "Join the waitlist and be among the first to access BrandPawa&apos;s powerful platform."
                 },
                 {
                   step: "2",
@@ -371,7 +371,7 @@ export default function Home() {
           
           <div className="max-w-4xl mx-auto relative z-10">
             <h2 className="text-4xl md:text-5xl font-black mb-8 animate-on-scroll text-glow">
-              Ready to unlock your brand's true potential?
+              Ready to unlock your brand&apos;s true potential?
             </h2>
             <p className="text-xl mb-12 opacity-90 max-w-2xl mx-auto leading-relaxed animate-on-scroll">
               Join thousands of forward-thinking brands already on the waitlist for exclusive early access.
