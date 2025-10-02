@@ -445,7 +445,7 @@ export default function Home() {
                 {
                   icon: <GrowIcon />,
                   title: "Grow",
-                  description: "Access tailored strategies and growth tools designed specifically for your brand&apos;s needs."
+                  description: "Access tailored strategies and growth tools designed specifically for your brand needs."
                 },
                 {
                   icon: <DominateIcon />,
