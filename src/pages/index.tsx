@@ -445,7 +445,7 @@ export default function Home() {
                 {
                   icon: <GrowIcon />,
                   title: "Grow",
-                  description: "Access tailored strategies and growth tools designed specifically for your brand's needs."
+                  description: "Access tailored strategies and growth tools designed specifically for your brand&apos;s needs."
                 },
                 {
                   icon: <DominateIcon />,
@@ -477,7 +477,7 @@ export default function Home() {
                 How It Works
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-2xl sm:max-w-3xl mx-auto mobile-text-lg tracking-wide">
-                Simple steps to unlock your brand's full potential
+                Simple steps to unlock your brand&apos;s full potential
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 relative">
@@ -491,7 +491,7 @@ export default function Home() {
                   step: "1",
                   icon: <Step1Icon />,
                   title: "Sign Up",
-                  description: "Join the waitlist and be among the first to access BrandPawa's powerful platform."
+                  description: "Join the waitlist and be among the first to access BrandPawa&apos;s powerful platform."
                 },
                 {
                   step: "2",
