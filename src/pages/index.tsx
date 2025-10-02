@@ -445,7 +445,7 @@ export default function Home() {
                 {
                   icon: <GrowIcon />,
                   title: "Grow",
-                  description: "Access tailored strategies and growth tools designed specifically for your brand&apos;s needs."
+                  description: "Access tailored strategies and growth tools designed specifically for your brand needs."
                 },
                 {
                   icon: <DominateIcon />,
@@ -491,7 +491,7 @@ export default function Home() {
                   step: "1",
                   icon: <Step1Icon />,
                   title: "Sign Up",
-                  description: "Join the waitlist and be among the first to access BrandPawa&apos;s powerful platform."
+                  description: "Join the waitlist and be among the first to access BrandPawa powerful platform."
                 },
                 {
                   step: "2",
