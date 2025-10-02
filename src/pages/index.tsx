@@ -321,8 +321,8 @@ export default function Home() {
           </div>
 
           {/* Logo with actual image */}
-          <div className="mb-8 sm:mb-12 transform hover:scale-105 transition-transform duration-300 animate-on-scroll">
-            <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl sm:rounded-2xl mx-auto shadow-2xl flex items-center justify-center animate-pulse-glow border border-purple-500/30 p-4 sm:p-6">
+          <div>
+            <div>
               <img 
                 src="/logo.png" 
                 alt="BrandPawa"
