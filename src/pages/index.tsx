@@ -418,54 +418,83 @@ export default function Home() {
         </section>
 
         {/* Features Section */}
-        <section id="features" className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-900 relative overflow-hidden mobile-padding">
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 to-indigo-600"></div>
-          
-          <div className="max-w-7xl mx-auto relative z-10">
-            <div className="text-center mb-12 sm:mb-16 animate-on-scroll">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 sm:mb-6 tracking-tight">
-                Why Choose{" "}
-                <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent animate-gradient text-glow">
-                  BrandPawa?
-                </span>
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-2xl sm:max-w-3xl mx-auto mobile-text-lg tracking-wide">
-                Comprehensive tools and insights to transform your brand&apos;s growth trajectory
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-              {[
-                {
-                  icon: <MeasureIcon />,
-                  title: "Measure",
-                  description: "Get your BrandPawa Score and see where your brand stands in the market with precision analytics."
-                },
-                {
-                  icon: <GrowIcon />,
-                  title: "Grow",
-                  description: "Access tailored strategies and growth tools designed specifically for your brand needs."
-                },
-                {
-                  icon: <DominateIcon />,
-                  title: "Dominate",
-                  description: "Track progress, refine your approach, and dominate your industry with data-driven confidence."
-                }
-              ].map((feature, index) => (
-                <div 
-                  key={index}
-                  className="group p-6 sm:p-8 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl hover:shadow-2xl sm:hover:shadow-3xl border border-slate-700 hover:border-purple-500/50 transform hover:-translate-y-1 sm:hover:-translate-y-2 transition-all duration-500 animate-on-scroll glass-morphism-dark text-center"
-                  style={{animationDelay: `${index * 200}ms`}}
-                >
-                  <div className="text-purple-400 mb-4 sm:mb-6 transform group-hover:scale-110 transition-transform duration-300 flex justify-center">
-                    {feature.icon}
-                  </div>
-                  <h3 className="font-bold text-xl sm:text-2xl mb-3 sm:mb-4 text-white tracking-wide">{feature.title}</h3>
-                  <p className="text-gray-300 leading-relaxed text-sm sm:text-base tracking-wide">{feature.description}</p>
-                </div>
-              ))}
-            </div>
+      {/* Features Section with Vector Icons */}
+<section id="features" className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-900 relative overflow-hidden mobile-padding">
+  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 to-indigo-600"></div>
+  
+  <div className="max-w-7xl mx-auto relative z-10">
+    <div className="text-center mb-12 sm:mb-16 animate-on-scroll">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 sm:mb-6 tracking-tight">
+        Why Choose{" "}
+        <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent animate-gradient text-glow">
+          BrandPawa?
+        </span>
+      </h2>
+      <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto mb-8 mobile-text-lg tracking-wide">
+        Because brands who dominate in a crowded market don&apos;t win by chance. They win by power.
+      </p>
+      <p className="text-lg sm:text-xl text-purple-300 max-w-4xl mx-auto mobile-text-lg tracking-wide font-semibold">
+        BrandPawa helps you build strength in the 4 pillars every successful brand must master:
+      </p>
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+      {[
+        {
+          icon: (
+            <svg className="w-12 h-12 sm:w-16 sm:h-16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" 
+                    strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          ),
+          title: "Positioning",
+          description: "Claim your unique space and stand out from competitors."
+        },
+        {
+          icon: (
+            <svg className="w-12 h-12 sm:w-16 sm:h-16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" 
+                    strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          ),
+          title: "Authority", 
+          description: "Build trust and become the go-to in your field."
+        },
+        {
+          icon: (
+            <svg className="w-12 h-12 sm:w-16 sm:h-16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" 
+                    strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          ),
+          title: "Wealth",
+          description: "Turn your brand into a magnet for clients, deals, and growth."
+        },
+        {
+          icon: (
+            <svg className="w-12 h-12 sm:w-16 sm:h-16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM13 10H7" 
+                    strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          ),
+          title: "Awareness",
+          description: "Increase your visibility and ensure people remember you."
+        }
+      ].map((feature, index) => (
+        <div 
+          key={index}
+          className="group p-6 sm:p-8 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl hover:shadow-2xl sm:hover:shadow-3xl border border-slate-700 hover:border-purple-500/50 transform hover:-translate-y-1 sm:hover:-translate-y-2 transition-all duration-500 animate-on-scroll glass-morphism-dark text-center"
+          style={{animationDelay: `${index * 200}ms`}}
+        >
+          <div className="text-purple-400 mb-4 sm:mb-6 transform group-hover:scale-110 transition-transform duration-300 flex justify-center">
+            {feature.icon}
           </div>
-        </section>
+          <h3 className="font-bold text-xl sm:text-2xl mb-3 sm:mb-4 text-white tracking-wide">{feature.title}</h3>
+          <p className="text-gray-300 leading-relaxed text-sm sm:text-base tracking-wide">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
         {/* How It Works Section */}
         <section className="py-16 sm:py-24 px-4 sm:px-6 bg-gradient-to-br from-slate-900 to-indigo-900/30 relative overflow-hidden mobile-padding">
