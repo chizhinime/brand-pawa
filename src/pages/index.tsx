@@ -174,7 +174,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>BrandPawa | Unlock Your Growth</title>
+        <title>BrandPawa | Your Brand Growth Partner</title>
         <meta
           name="description"
           content="Know where your brand stands and grow where your brand goes. Get instant clarity and powerful strategy to dominate your market."
