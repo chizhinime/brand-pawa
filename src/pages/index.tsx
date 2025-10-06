@@ -194,7 +194,7 @@ export default function Home() {
         <meta name="keywords" content="brand growth, analytics, marketing, brand score, business growth, brand positioning, brand authority" />
         <meta name="author" content="BrandPawa" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="BrandPawa | Know Where Your Brand Stands. Grow Where Your Brand Goes." />
+        <meta property="og:title" content="BrandPawa | Your Brand Growth Partner." />
         <meta property="og:description" content="Get instant clarity, powerful strategy, and tools to build a brand that dominates your market." />
         <meta property="og:image" content="/icon-512.png" />
         <meta property="og:url" content="https://brandpawa.com" />
