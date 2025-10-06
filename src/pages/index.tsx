@@ -199,7 +199,7 @@ export default function Home() {
         <meta property="og:image" content="/icon-512.png" />
         <meta property="og:url" content="https://brandpawa.com" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="BrandPawa | Unlock Your Growth" />
+        <meta name="twitter:title" content="BrandPawa | Your Brand Growth Partner" />
         <meta name="twitter:description" content="Know where your brand stands and grow where your brand goes." />
         <meta name="twitter:image" content="/icon-512.png" />
         
