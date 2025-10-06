@@ -1,4 +1,3 @@
-// pages/index.tsx
 import Head from "next/head";
 import { FormEvent, useEffect, useRef, useState } from "react";
 
@@ -121,23 +120,32 @@ export default function Home() {
   };
 
   // Vector Icons as SVG Components
-  const MeasureIcon = () => (
+  const PositioningIcon = () => (
     <svg className="w-12 h-12 sm:w-16 sm:h-16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-      <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" 
+      <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" 
+            strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" 
             strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   );
 
-  const GrowIcon = () => (
+  const AuthorityIcon = () => (
     <svg className="w-12 h-12 sm:w-16 sm:h-16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-      <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" 
+      <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" 
             strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   );
 
-  const DominateIcon = () => (
+  const WealthIcon = () => (
     <svg className="w-12 h-12 sm:w-16 sm:h-16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-      <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" 
+      <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" 
+            strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  );
+
+  const AwarenessIcon = () => (
+    <svg className="w-12 h-12 sm:w-16 sm:h-16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM13 10H7" 
             strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   );
@@ -166,10 +174,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>BrandPawa | Your Growth Partner</title>
+        <title>BrandPawa | Unlock Your Growth</title>
         <meta
           name="description"
-          content="Discover your BrandPawa Score and unlock predictable growth. Join the waitlist today."
+          content="Know where your brand stands and grow where your brand goes. Get instant clarity and powerful strategy to dominate your market."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
@@ -183,22 +191,23 @@ export default function Home() {
         <meta name="theme-color" content="#7c3aed" />
         
         {/* SEO Meta Tags */}
-        <meta name="keywords" content="brand growth, analytics, marketing, brand score, business growth" />
+        <meta name="keywords" content="brand growth, analytics, marketing, brand score, business growth, brand positioning, brand authority" />
         <meta name="author" content="BrandPawa" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="BrandPawa | Unlock Your Growth" />
-        <meta property="og:description" content="Discover your BrandPawa Score and unlock predictable growth." />
+        <meta property="og:title" content="BrandPawa | Know Where Your Brand Stands. Grow Where Your Brand Goes." />
+        <meta property="og:description" content="Get instant clarity, powerful strategy, and tools to build a brand that dominates your market." />
         <meta property="og:image" content="/icon-512.png" />
         <meta property="og:url" content="https://brandpawa.com" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="BrandPawa | Unlock Your Growth" />
-        <meta name="twitter:description" content="Discover your BrandPawa Score and unlock predictable growth." />
+        <meta name="twitter:description" content="Know where your brand stands and grow where your brand goes." />
         <meta name="twitter:image" content="/icon-512.png" />
         
         {/* Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Coolvetica&display=swap" rel="stylesheet" />
+        
         <style>{`
           @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
@@ -320,36 +329,39 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Logo with actual image */}
-<div className="mb-8 sm:mb-12 transform hover:scale-105 transition-transform duration-300 animate-on-scroll w-full">
-  <div className="flex items-center justify-start p-4 sm:p-6">
-    <img 
-      src="/logo.png" 
-      alt="BrandPawa"
-      className="h-12 sm:h-16 w-auto ml-4 sm:ml-8"
-      onError={(e) => {
-        const target = e.target as HTMLImageElement;
-        target.style.display = 'none';
-        const fallback = document.createElement('div');
-        fallback.className = 'text-white font-bold text-xl sm:text-2xl tracking-wide ml-4 sm:ml-8';
-        fallback.textContent = 'BRANDPAWA';
-        target.parentNode?.appendChild(fallback);
-      }}
-    />
-  </div>
-</div>
+          {/* Logo - Positioned on the left */}
+          <div className="w-full max-w-7xl mx-auto mb-8 sm:mb-12 transform hover:scale-105 transition-transform duration-300 animate-on-scroll">
+            <div className="flex items-center justify-start p-4 sm:p-6">
+              <img 
+                src="/logo.png" 
+                alt="BrandPawa"
+                className="h-12 sm:h-16 w-auto"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const fallback = document.createElement('div');
+                  fallback.className = 'text-white font-bold text-xl sm:text-2xl tracking-wide';
+                  fallback.textContent = 'BRANDPAWA';
+                  target.parentNode?.appendChild(fallback);
+                }}
+              />
+            </div>
+          </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight sm:leading-tight mb-6 sm:mb-8 max-w-4xl sm:max-w-6xl animate-on-scroll px-2 tracking-tight">
-            Discover your{" "}
-            <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent animate-gradient text-glow block sm:inline">
-              BrandPawa Score
-            </span>{" "}
-            and unlock predictable growth.
+            Know Where Your Brand Stands.
+            <br />
+            <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent animate-gradient text-glow">
+              Grow Where Your Brand Goes.
+            </span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-gray-300 max-w-xl sm:max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed animate-on-scroll mobile-text-lg tracking-wide">
-            Join the waitlist to be the first to test your brand and access
-            exclusive growth tools designed to scale your business.
+          <p className="text-lg sm:text-xl text-gray-300 max-w-2xl sm:max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed animate-on-scroll mobile-text-lg tracking-wide">
+            BrandPawa gives you instant clarity, powerful strategy, and tools to build a brand that dominates your market.
+          </p>
+
+          <p className="text-lg sm:text-xl text-purple-300 max-w-xl sm:max-w-2xl mx-auto mb-8 sm:mb-12 leading-relaxed animate-on-scroll mobile-text-lg tracking-wide">
+            Join the waitlist to be the first to test your brand and access exclusive growth tools
           </p>
 
           {/* Waitlist Form */}
@@ -417,84 +429,64 @@ export default function Home() {
           </form>
         </section>
 
-        {/* Features Section */}
-      {/* Features Section with Vector Icons */}
-<section id="features" className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-900 relative overflow-hidden mobile-padding">
-  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 to-indigo-600"></div>
-  
-  <div className="max-w-7xl mx-auto relative z-10">
-    <div className="text-center mb-12 sm:mb-16 animate-on-scroll">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 sm:mb-6 tracking-tight">
-        Why Choose{" "}
-        <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent animate-gradient text-glow">
-          BrandPawa?
-        </span>
-      </h2>
-      <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto mb-8 mobile-text-lg tracking-wide">
-        Because brands who dominate in a crowded market don&apos;t win by chance. They win by power.
-      </p>
-      <p className="text-lg sm:text-xl text-purple-300 max-w-4xl mx-auto mobile-text-lg tracking-wide font-semibold">
-        BrandPawa helps you build strength in the 4 pillars every successful brand must master:
-      </p>
-    </div>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-      {[
-        {
-          icon: (
-            <svg className="w-12 h-12 sm:w-16 sm:h-16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" 
-                    strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          ),
-          title: "Positioning",
-          description: "Claim your unique space and stand out from competitors."
-        },
-        {
-          icon: (
-            <svg className="w-12 h-12 sm:w-16 sm:h-16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" 
-                    strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          ),
-          title: "Authority", 
-          description: "Build trust and become the go-to in your field."
-        },
-        {
-          icon: (
-            <svg className="w-12 h-12 sm:w-16 sm:h-16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" 
-                    strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          ),
-          title: "Wealth",
-          description: "Turn your brand into a magnet for clients, deals, and growth."
-        },
-        {
-          icon: (
-            <svg className="w-12 h-12 sm:w-16 sm:h-16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM13 10H7" 
-                    strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          ),
-          title: "Awareness",
-          description: "Increase your visibility and ensure people remember you."
-        }
-      ].map((feature, index) => (
-        <div 
-          key={index}
-          className="group p-6 sm:p-8 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl hover:shadow-2xl sm:hover:shadow-3xl border border-slate-700 hover:border-purple-500/50 transform hover:-translate-y-1 sm:hover:-translate-y-2 transition-all duration-500 animate-on-scroll glass-morphism-dark text-center"
-          style={{animationDelay: `${index * 200}ms`}}
-        >
-          <div className="text-purple-400 mb-4 sm:mb-6 transform group-hover:scale-110 transition-transform duration-300 flex justify-center">
-            {feature.icon}
+        {/* Rest of your sections remain exactly the same */}
+        {/* Why Choose BrandPawa Section */}
+        <section id="features" className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-900 relative overflow-hidden mobile-padding">
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 to-indigo-600"></div>
+          
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="text-center mb-12 sm:mb-16 animate-on-scroll">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 sm:mb-6 tracking-tight">
+                Why Choose{" "}
+                <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent animate-gradient text-glow">
+                  BrandPawa?
+                </span>
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto mb-8 mobile-text-lg tracking-wide">
+                Because brands who dominate in a crowded market don&apos;t win by chance. They win by power.
+              </p>
+              <p className="text-lg sm:text-xl text-purple-300 max-w-4xl mx-auto mobile-text-lg tracking-wide font-semibold">
+                BrandPawa helps you build strength in the 4 pillars every successful brand must master:
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+              {[
+                {
+                  icon: <PositioningIcon />,
+                  title: "Positioning",
+                  description: "Never blend in. Stand out with clear strategy and unique identity."
+                },
+                {
+                  icon: <AuthorityIcon />,
+                  title: "Authority", 
+                  description: "Be the trusted leader. Shape your brand to win trust, followers, and influence."
+                },
+                {
+                  icon: <WealthIcon />,
+                  title: "Wealth",
+                  description: "Convert visibility into revenue. Use automation + strategy to build consistent value."
+                },
+                {
+                  icon: <AwarenessIcon />,
+                  title: "Awareness",
+                  description: "Amplify your reach. Get noticed where it matters."
+                }
+              ].map((feature, index) => (
+                <div 
+                  key={index}
+                  className="group p-6 sm:p-8 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl hover:shadow-2xl sm:hover:shadow-3xl border border-slate-700 hover:border-purple-500/50 transform hover:-translate-y-1 sm:hover:-translate-y-2 transition-all duration-500 animate-on-scroll glass-morphism-dark text-center"
+                  style={{animationDelay: `${index * 200}ms`}}
+                >
+                  <div className="text-purple-400 mb-4 sm:mb-6 transform group-hover:scale-110 transition-transform duration-300 flex justify-center">
+                    {feature.icon}
+                  </div>
+                  <h3 className="font-bold text-xl sm:text-2xl mb-3 sm:mb-4 text-white tracking-wide">{feature.title}</h3>
+                  <p className="text-gray-300 leading-relaxed text-sm sm:text-base tracking-wide">{feature.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
-          <h3 className="font-bold text-xl sm:text-2xl mb-3 sm:mb-4 text-white tracking-wide">{feature.title}</h3>
-          <p className="text-gray-300 leading-relaxed text-sm sm:text-base tracking-wide">{feature.description}</p>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
+        </section>
 
         {/* How It Works Section */}
         <section className="py-16 sm:py-24 px-4 sm:px-6 bg-gradient-to-br from-slate-900 to-indigo-900/30 relative overflow-hidden mobile-padding">
@@ -518,13 +510,13 @@ export default function Home() {
                   step: "1",
                   icon: <Step1Icon />,
                   title: "Sign Up",
-                  description: "Join the waitlist and be among the first to access BrandPawa powerful platform."
+                  description: "Join the waitlist and be among the first to access BrandPawa&apos;s powerful platform."
                 },
                 {
                   step: "2",
                   icon: <Step2Icon />,
-                  title: "Test Your Brand",
-                  description: "Get your BrandPawa Score instantly with our comprehensive diagnostic tools."
+                  title: "Put Your Brand to the Test",
+                  description: "Find out your BrandPawa Score instantly and discover what your brand needs to grow stronger."
                 },
                 {
                   step: "3",
@@ -590,13 +582,26 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="py-6 sm:py-8 text-center text-gray-400 bg-slate-900 border-t border-slate-800 mobile-padding">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <p className="text-xs sm:text-sm animate-on-scroll font-coolvetica tracking-wide">
-              © {new Date().getFullYear()} BrandPawa. All rights reserved. 
-              <span className="mx-2">•</span>
-              Building the future of brand growth
-            </p>
+        <footer className="py-8 sm:py-12 text-center text-gray-400 bg-slate-900 border-t border-slate-800 mobile-padding">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
+            <div className="mb-6 animate-on-scroll">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 tracking-wide">
+                BrandPawa
+              </h3>
+              <p className="text-lg sm:text-xl text-gray-300 mb-6 leading-relaxed tracking-wide">
+                For brands who don&apos;t just want to exist. Brands who want to be heard, trusted, and remembered.
+              </p>
+              <p className="text-purple-300 text-base sm:text-lg font-semibold tracking-wide">
+                Join thousands who are already shaping their brands with purpose.
+              </p>
+            </div>
+            <div className="pt-6 border-t border-slate-700">
+              <p className="text-xs sm:text-sm animate-on-scroll font-coolvetica tracking-wide">
+                © {new Date().getFullYear()} BrandPawa. All rights reserved. 
+                <span className="mx-2">•</span>
+                Building the future of brand growth
+              </p>
+            </div>
           </div>
         </footer>
       </main>
