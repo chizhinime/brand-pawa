@@ -489,58 +489,53 @@ export default function Home() {
         </section>
 
         {/* How It Works Section */}
-        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-gradient-to-br from-slate-900 to-indigo-900/30 relative overflow-hidden mobile-padding">
-          <div className="max-w-7xl mx-auto relative z-10">
-            <div className="text-center mb-12 sm:mb-16 animate-on-scroll">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 sm:mb-6 text-white tracking-tight">
+        <section className="py-20 px-6 bg-slate-950">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16 animate-on-scroll">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-6 text-white tracking-tight">
                 How It Works
               </h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-2xl sm:max-w-3xl mx-auto mobile-text-lg tracking-wide">
+              <p className="text-xl text-gray-300 leading-relaxed tracking-wide max-w-2xl mx-auto">
                 Simple steps to unlock your brand&apos;s full potential
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 relative">
-              {/* Mobile vertical line */}
-              <div className="hidden md:block absolute top-20 left-1/3 right-1/3 h-0.5 bg-gradient-to-r from-purple-500/30 to-indigo-500/30 transform translate-y-8">
-                <div className="w-full h-full bg-gradient-to-r from-transparent via-purple-500 to-transparent animate-pulse"></div>
+
+            <div className="space-y-12 max-w-3xl mx-auto">
+              <div className="flex items-start space-x-6 animate-on-scroll">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full flex items-center justify-center text-white font-black text-lg">
+                  1
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2 text-white tracking-wide">Sign Up</h3>
+                  <p className="text-gray-300 leading-relaxed tracking-wide">
+                    Join the waitlist and be among the first to access BrandPawa&apos;s powerful platform.
+                  </p>
+                </div>
               </div>
               
-              {[
-                {
-                  step: "1",
-                  icon: <Step1Icon />,
-                  title: "Sign Up",
-                  description: "Join the waitlist and be among the first to access BrandPawa&apos;s powerful platform."
-                },
-                {
-                  step: "2",
-                  icon: <Step2Icon />,
-                  title: "Put Your Brand to the Test",
-                  description: "Find out your BrandPawa Score instantly and discover what your brand needs to grow stronger."
-                },
-                {
-                  step: "3",
-                  icon: <Step3Icon />,
-                  title: "Unlock Growth",
-                  description: "Use exclusive insights and tools to drive predictable, sustainable growth."
-                }
-              ].map((step, index) => (
-                <div 
-                  key={index}
-                  className="relative text-center group animate-on-scroll"
-                  style={{animationDelay: `${index * 300}ms`}}
-                >
-                  <div className="relative z-10 bg-slate-800 rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-xl sm:shadow-2xl hover:shadow-2xl sm:hover:shadow-3xl border border-slate-700 transform hover:-translate-y-1 sm:hover:-translate-y-2 transition-all duration-500 group-hover:animate-pulse-glow glass-morphism-dark">
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg sm:rounded-2xl flex items-center justify-center text-white font-black text-xl sm:text-2xl mb-4 sm:mb-6 mx-auto transform group-hover:scale-110 transition-transform duration-300 border border-purple-500/30">
-                      <div className="text-white">
-                        {step.icon}
-                      </div>
-                    </div>
-                    <h3 className="font-bold text-xl sm:text-2xl mb-3 sm:mb-4 text-white tracking-wide">{step.title}</h3>
-                    <p className="text-gray-300 leading-relaxed text-sm sm:text-base tracking-wide">{step.description}</p>
-                  </div>
+              <div className="flex items-start space-x-6 animate-on-scroll">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full flex items-center justify-center text-white font-black text-lg">
+                  2
                 </div>
-              ))}
+                <div>
+                  <h3 className="text-xl font-bold mb-2 text-white tracking-wide">Put Your Brand to the Test</h3>
+                  <p className="text-gray-300 leading-relaxed tracking-wide">
+                    Find out your BrandPawa Score instantly and discover what your brand needs to grow stronger.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-6 animate-on-scroll">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full flex items-center justify-center text-white font-black text-lg">
+                  3
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2 text-white tracking-wide">Unlock Growth</h3>
+                  <p className="text-gray-300 leading-relaxed tracking-wide">
+                    Use exclusive insights and tools to drive predictable, sustainable growth.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
