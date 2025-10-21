@@ -331,22 +331,22 @@ export default function Home() {
 
           {/* Logo - Positioned on the left */}
           <div className="w-full max-w-7xl mx-auto mb-8 sm:mb-12 transform hover:scale-105 transition-transform duration-300 animate-on-scroll">
-            <div className="flex items-center justify-start p-4 sm:p-6">
-              <img 
-                src="/logo.png" 
-                alt="BrandPawa"
-                className="h-12 sm:h-16 w-auto"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.style.display = 'none';
-                  const fallback = document.createElement('div');
-                  fallback.className = 'text-white font-bold text-xl sm:text-2xl tracking-wide';
-                  fallback.textContent = 'BRANDPAWA';
-                  target.parentNode?.appendChild(fallback);
-                }}
-              />
-            </div>
-          </div>
+  <div className="flex items-center justify-start p-0 sm:pl-2">
+    <img 
+      src="/logo.png" 
+      alt="BrandPawa"
+      className="h-12 sm:h-16 w-auto ml-2 sm:ml-4"
+      onError={(e) => {
+        const target = e.target as HTMLImageElement;
+        target.style.display = 'none';
+        const fallback = document.createElement('div');
+        fallback.className = 'text-white font-bold text-xl sm:text-2xl tracking-wide ml-2 sm:ml-4';
+        fallback.textContent = 'BRANDPAWA';
+        target.parentNode?.appendChild(fallback);
+      }}
+    />
+  </div>
+</div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight sm:leading-tight mb-6 sm:mb-8 max-w-4xl sm:max-w-6xl animate-on-scroll px-2 tracking-tight">
             Know Where Your Brand Stands.
