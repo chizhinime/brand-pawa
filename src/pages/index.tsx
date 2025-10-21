@@ -557,10 +557,10 @@ export default function Home() {
                 Join the Waitlist Now
               </button>
               <a
-                href="#features"
+                href="https://t.me/BrandPawa"
                 className="inline-block py-3 sm:py-4 px-6 sm:px-8 glass-morphism-dark text-white font-bold rounded-lg sm:rounded-xl hover:bg-white/10 transform hover:scale-105 transition-all duration-300 border border-white/20 text-base sm:text-lg w-full sm:w-auto text-center font-coolvetica tracking-wide"
               >
-                Learn More
+                Join us on Telegram
               </a>
             </div>
             <div className="mt-6 sm:mt-8 flex items-center justify-center gap-3 sm:gap-4 text-sm opacity-80 animate-on-scroll">
