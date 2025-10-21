@@ -442,12 +442,6 @@ export default function Home() {
                   BrandPawa?
                 </span>
               </h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto mb-8 mobile-text-lg tracking-wide">
-                Because brands who dominate in a crowded market don&apos;t win by chance. They win by power.
-              </p>
-              <p className="text-lg sm:text-xl text-purple-300 max-w-4xl mx-auto mobile-text-lg tracking-wide font-semibold">
-                BrandPawa helps you build strength in the 4 pillars every successful brand must master:
-              </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               {[
@@ -518,7 +512,7 @@ export default function Home() {
                   2
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2 text-white tracking-wide">Put Your Brand to the Test</h3>
+                  <h3 className="text-xl font-bold mb-2 text-white tracking-wide">Test Your Brand</h3>
                   <p className="text-gray-300 leading-relaxed tracking-wide">
                     Find out your BrandPawa Score instantly and discover what your brand needs to grow stronger.
                   </p>
