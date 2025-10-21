@@ -584,10 +584,7 @@ export default function Home() {
                 BrandPawa
               </h3>
               <p className="text-lg sm:text-xl text-gray-300 mb-6 leading-relaxed tracking-wide">
-                For brands who don&apos;t just want to exist. Brands who want to be heard, trusted, and remembered.
-              </p>
-              <p className="text-purple-300 text-base sm:text-lg font-semibold tracking-wide">
-                Join thousands who are already shaping their brands with purpose.
+                Your Brand Growth Partner
               </p>
             </div>
             <div className="pt-6 border-t border-slate-700">
